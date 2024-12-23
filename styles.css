@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #333;
+    line-height: 1.6;
+    background: url('bg3.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
+/* Oscillating Logo */
+.logo {
+    max-width: 100%; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    animation: oscillate 1.5s ease-in-out infinite; /* Oscillating animation */
+}
+
+/* Define the oscillation animation */
+@keyframes oscillate {
+    0% {
+        transform: rotate(-15deg); /* Rotate slightly to the left */
+    }
+    50% {
+        transform: rotate(15deg); /* Rotate slightly to the right */
+    }
+    100% {
+        transform: rotate(-15deg); /* Return to the left */
+    }
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    color: #B4DDDB;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 30px 20px;
+}
+
+/* Call-to-Action Section */
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 30px 20px;
+}
+
+/* Footer */
+.footer {
+    background: rgba(94, 182, 255, 0.9); /* Semi-transparent black */
+    color: #76329F;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Mute Button */
+#mute-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    padding: 0; /* No extra padding */
+    cursor: pointer; /* Show pointer cursor */
+    color: #5eb6ff;; /* Loudspeaker icon color */
+}
+
+#mute-button svg {
+    width: 40px; /* Icon size */
+    height: 40px;
+    fill: currentColor; /* Icon color matches the button color */
+    stroke: currentColor; /* For stroke paths in the icon */
+}
+
+#mute-button:hover {
+    color: #76329F; /* Change icon color on hover */
+}
+
+/* Cards (For Roadmap, Tokenomics, Community, About) */
+.card {
+    background: rgba(118, 50, 159, 0.8); /* Slightly transparent orange */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #5eb6ff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Feature Cards Inside the Features Section */
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+
+.feature-cards .card {
+    flex: 1;
+    min-width: 200px;
+    /*background: rgba(118, 50, 159, 0.8); /* Slightly transparent orange */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    
+    transition: transform 0.3s ease;
+}
+
+.feature-cards .card:hover {
+    transform: scale(1.05);
+}
+
+/* Roadmap and Tokenomics List */
+.roadmap ul, .tokenomics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.roadmap li, .tokenomics li {
+    font-size: 16px;
+    margin: 10px 0;
+    
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-cards .card {
+        width: 100%;
+    }
+}
+
+/* Music Icon (Top Left Corner) */
+#mute-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+/* Header Content with Card */
+.header-content {
+    background: rgba(118, 50, 159, 0.8); /* Slightly transparent orange */
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #5eb6ff;
+
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.4));
+}
+
+/* Buy Now Button */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #76329F;
+    background: rgba(94, 182, 255, 0.9);
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#smallText{
+    font-size: xx-small;
+}
+/* Social Icons General Styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons .fa {
+    padding: 20px;
+    font-size: 25px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%; /* Makes the icons circular */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Telegram Icon Styling */
+.fa-telegram {
+    background: #0088cc; /* Telegram blue */
+    color: white;
+}
+
+/* Twitter Icon Styling */
+.fa-twitter {
+    background: #55ACEE; /* Twitter blue */
+    color: white;
+}
+
+/* Chart Icon Styling (Dexscreener) */
+.fa-line-chart {
+    background: #76329F;
+}

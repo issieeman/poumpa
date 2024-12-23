@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poumpa Loompa Coin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        
+        <div class="container">
+            <img src="logo5.png" alt="Poumpa Loompa Logo" class="logo">
+            <div class="header-content">
+            <h2>The magical coin that makes you smile!</h2>
+            <p class="tagline">CA: 7nS5qGXhbEtP1g3RyXChDskPz6z9oZTbzCuL96cAuT6Gpump</p>
+            <nav class="social-icons">
+                <a href="https://t.me/yourusername" class="fa fa-telegram"></a>
+<a href="https://twitter.com/yourusername" class="fa fa-twitter"></a>
+
+                </a>
+                <a href="https://dexscreener.com/" class="fa fa-line-chart" aria-label="Chart"></a>
+
+
+
+            </nav>
+        
+            <a href="https://dexscreener.com/" class="cta-button">Buy Now</a>
+        </div>
+            <audio id="background-audio" autoplay loop>
+                <source src="poumpaloompa.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button id="mute-button" onclick="toggleMute()">
+                <svg id="icon-unmuted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M5 8h4l5-4v16l-5-4H5v-8Z" fill="currentColor" />
+                    <path d="M14 10v4M16 9v6M18 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <svg id="icon-muted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+                    <path d="M5 8h4l5-4v16l-5-4H5v-8Z" fill="currentColor" />
+                    <path d="M16 8l6 8M16 16l6-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container card">
+                <h2>What is Poumpa Loompa</h2>
+                <p>It's the most whimsical cryptocurrency you'll ever find! Our goal? To make the world a more magical place. Join us in our meme coin adventure!</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="feature-cards">
+                    <div class="card">
+                        <h3>🎉 Pure Fun</h3>
+                        <p>Invest in a coin that's all about ups and no downs</p>
+                    </div>
+                    <div class="card">
+                        <h3>🌟 Magical Rewards</h3>
+                        <p>Grab your chance to win the Golden Ticket!</p>
+                        <p id="smallText"> See roadmap</p>
+                    </div>
+                    <div class="card">
+                        <h3>💖 Community First</h3>
+                        <p>Be part of a vibrant and supportive community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="roadmap">
+            <div class="container card">
+                <h2>Roadmap</h2>
+                <ul>
+                    <li>🚀 Launch Phase: Minting coins and building hype!</li>
+                    <li>📈 Growth Phase: Partnerships with magical brands.</li>
+                    <li>🎉 Celebration Phase: Poumpa Loompa events and giveaways.</li>
+                    <li>🎉 Once we reach 2Mil MC, we will hold a raffle where we donate 2% supply to a single holder</li>
+                    <li id="smallText"> Raffle Eligibility and Conditions:
+
+                        The raffle will be held once the market cap reaches $2 million, with the winner receiving 2% of the total supply of Poumpa Loompa Coins.
+                        To qualify, participants must not have any sell transactions during the eligibility period leading up to the raffle.
+                        The winner will be selected live in a transparent event to ensure fairness and integrity.
+                    
+                    Distribution Process:
+                    
+                        The 2% prize will be distributed gradually over a specified period to prevent any market disruptions or sudden sell-offs. The distribution schedule and terms will be communicated to the winner in advance.
+                    
+                    Important Notes:
+                    
+                        Poumpa Loompa Coin reserves the right to verify eligibility and enforce rules to maintain the community's trust and the token’s integrity.
+                        Any attempts to manipulate or exploit the rules will result in disqualification.
+                        This raffle is meant as a community reward and is subject to the project's discretion to ensure fair play.
+                    
+                    By participating, you acknowledge and agree to these terms and conditions.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tokenomics Section -->
+        <section id="tokenomics" class="tokenomics">
+            <div class="container card">
+                <h2>Tokenomics</h2>
+                <p>Total Supply: 1 Trillion Poumpa Loompa Coins</p>
+                <ul>
+                    <li>🔒 100% Burned Liquidity</li>
+                    <li>💻 Renounced </li>
+                    <li>🎉 0% Tax </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="community">
+            <div class="container card">
+                <h2>Join the Community</h2>
+                <p>Chat with us on <a href="#">Telegram</a>, <a href="#">X</a>, to stay updated and connect with fellow believers in magic and crypto!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Poumpa Loompa Coin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const audio = document.getElementById('background-audio');
+        const unmutedIcon = document.getElementById('icon-unmuted');
+        const mutedIcon = document.getElementById('icon-muted');
+
+        function toggleMute() {
+            if (audio.muted) {
+                audio.muted = false;
+                unmutedIcon.style.display = 'block';
+                mutedIcon.style.display = 'none';
+            } else {
+                audio.muted = true;
+                unmutedIcon.style.display = 'none';
+                mutedIcon.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
